@@ -1,0 +1,783 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 1, 15);
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid 8px white;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header::before {
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/imgs/img-header.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+.titulo-header {
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    margin: 0px 0px 0px 0px;
+}
+
+.paragrafo-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+.div-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -120px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.paragrafo-div-img {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.img-perfil {
+    width:200px;
+    border:solid 8px white;
+    border-radius: 50%; 
+    z-index: 2;
+}
+
+.secao-principal{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 3rem;
+}
+
+.nav-links {
+    display: flex;
+    border: solid 5px white;
+    border-radius:15px;
+    padding: 60px 120px;
+}
+
+.lista-nav{
+    display: flex;
+    gap: 100px;
+    list-style: none;
+}
+
+.item-link {
+   display:inline-block;
+   text-decoration: none;
+   border: solid 5px white;
+   border-radius: 10px;
+   padding: 80px;
+   color:white;
+   font-family: Arial, sans-serif;
+   font-weight: bold;
+   font-size: 2rem;
+   transition: transform 0.0s ease-in-out;
+}
+
+.item-link:hover {
+    transform: scale(1.2);
+}
+
+.item-sobre-mim {
+    background-image: url('/imgs/img-sobre-mim.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.item-formacao {
+    background-image: url('/imgs/img-formacao.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-portfolio {
+    background-image: url('/imgs/img-portfolio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.item-contato {
+    background-image: url('/imgs/img-contato.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Seção - Sobre mim*/
+.secao-sobre-mim {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:White;
+    margin: 0px 25px 35px 25px;
+    border: solid 5px white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+  
+}
+
+.secao-sobre-mim::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imgs/img-sobre-mim.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.titulo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.texto-sobre-mim {
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    margin-top:0;
+    margin-bottom: 3rem;
+    width:90%;
+}
+
+/*Seção - Formação*/
+.secao-formacao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:White;
+    margin: 0px 25px 35px 25px;
+    border: solid 5px white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+}
+
+.secao-formacao::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imgs/img-formacao.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+.texto-formacao {
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    margin-top:0;
+    margin-bottom: 3rem;
+    width:90%;
+}
+
+.formacao-educacional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.formacao-educacional h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align:left;
+    width:90%;
+}
+
+
+/*Seção - Portfólio*/
+.secao-portfolio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:White;
+    margin: 0px 25px 35px 25px;
+    border: solid 5px white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+}
+
+.secao-portfolio::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imgs/img-portfolio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.div-portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 50px;
+    margin-bottom: 5rem;
+}
+
+.img-item-portfolio {
+    width:200px;
+    height: 150px;
+    border: solid 5px white;
+    border-radius:15px;
+    object-fit: cover;
+}
+
+.item-link-portfolio {
+    color:rgb(2, 161, 45);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight:600;
+}
+
+.item-link-portfolio:hover {
+    color: rgb(247, 3, 3);
+}
+
+.div-item-portfolio {
+    display: flex;
+    width: 90%;
+    gap:30px;
+}
+
+
+/*Seção - Contato*/
+.secao-contato {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:White;
+    margin: 0px 25px 35px 25px;
+    border: solid 5px white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+}
+
+.secao-contato::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imgs/img-contato.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius:15px;
+    padding: 2rem;
+    margin-bottom:5rem;
+    background-color: white;
+    color:black;
+}
+
+form h2 {
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+}
+
+.form-contato {
+   display:flex;
+   flex-direction:column;
+   gap: 30px;
+}
+
+label {
+    font-size: 1.3rem;
+    font-family: Arial, sans-serif;
+    font-weight:600;
+}
+
+input {
+    display: flex;
+    gap: 5px;
+    font-size: 1.2rem;
+    padding: 5px 10px 5px 10px;
+    border: solid 3px rgb(0, 0, 0);
+    border-radius:15px;
+}
+
+.input-contato-mensagem {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+#textarea-contato-mensagem {
+    border: solid 3px black;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+.div-button-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.input-contato-submit {
+    background-color: green;
+    font-size: 1.3rem;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 15px;
+}
+
+.input-contato-submit:hover {
+    background-color: red;
+    transition: transform 0.6s;
+    transform: scale(1.1);
+}
+
+/*Div com a mensagem de sucesso ao enviar formulário*/
+.div-mensagemSucesso {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 18%;
+    margin-bottom: 3rem;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    display: none;
+
+}
+
+#botao-ok {
+    width:80px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    background-color: rgb(2, 117, 2);
+    color: white;
+}
+
+#botao-ok:hover {
+    background-color: rgb(1, 89, 1);
+}
+
+/*Estilização para telas muito grande*/
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    .secao-sobre-mim, .secao-formacao, .secao-portfolio, .secao-contato {
+        width: 94%;
+        margin:0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links {
+        width: 90%;
+        padding: 15px 30px;
+    }
+
+    .lista-nav {
+        width:100%;
+        padding: 0;;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .item-link {
+        padding:50px;
+        font-size: 1.2rem;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 2.3rem;
+    }
+
+    .texto-sobre-mim, .texto-formacao, .item-link-portfolio {
+        font-size: 1.3rem;
+    }
+
+    .formacao-educacional h2 {
+        font-size: 1.4rem;
+    }
+
+    .div-item-portfolio {
+        gap:15px;
+        box-sizing: border-box;
+    }
+
+    .descricao h2 {
+        margin: 0;
+    }
+
+    .descricao p {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+
+    form h2 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 5px 30px;
+    }
+
+    #textarea-contato-mensagem {
+        font-size: 1.2rem;
+    }
+
+    .div-mensagemSucesso {
+        width:60%;
+        margin-top: 3rem;
+    }
+
+    .texto-mensagemSucesso {
+        font-size: 1.7rem;
+    }
+
+    #botao-ok {
+        width: 100px;
+        height: 50px;
+    }
+
+}
+
+/*Estilização para telas médias*/
+@media (max-width: 1024px) {
+
+    .secao-principal {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding: 30px 120px;
+    }
+
+    .lista-nav {
+        justify-content: space-around;
+        padding: 0px;
+        gap: 20px;
+    }
+
+    .item-link {
+        display: flex;
+        justify-content: center;
+        font-size:1.3rem;
+        width: 20px;
+        height: 10px;
+        text-align: center;
+    }
+
+    .item-link:hover {
+        transform: scale(1.1);
+    }
+
+    .secao-sobre-mim, .secao-formacao, .secao-portfolio, .secao-contato {
+        width:96%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .texto-sobre-mim, .texto-formacao, label, input, #textarea-contato-mensagem {
+        font-size: 1.1rem;
+    }
+
+    .div-item-portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .descricao {
+        gap:10px;
+    }
+
+    .descricao p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .div-mensagemSucesso {
+        width: 60%;
+        margin-top: 2.5rem;
+    }
+
+}
+
+/*Estilização para telas menores*/
+@media (max-width: 768px) {
+
+    .secao-principal {
+        width:70%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .lista-nav {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:50px;
+    }
+
+    .lista-nav li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item-link {
+        padding: 50px;
+        font-size: 1.2rem;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+    }
+
+    .secao-sobre-mim, .secao-formacao, .secao-portfolio, .secao-contato {
+        width:88%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .texto-sobre-mim, .texto-formacao, .item-link-portfolio, label {
+        font-size: 1.2rem;
+    }
+
+    .formacao-educacional h2 {
+        font-size: 1.4rem;
+    }
+
+    .div-portfolio {
+        gap: 20px;
+    }
+
+    .div-item-portfolio {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .descricao p, input, #textarea-contato-mensagem {
+        font-size:1.1rem;
+    }
+
+    .div-mensagemSucesso {
+        width:60%;
+        margin-top: 2.5rem;
+    }
+
+    .texto-mensagemSucesso {
+        font-size: 1.6rem;
+    }
+
+   #botao-ok {
+    width: 100px;
+    height: 50px;
+   }
+}
+
+/*Estilização para telas muito pequenas*/
+@media (max-width: 480px) {
+
+    .titulo-header {
+        font-size:2rem;
+    }
+
+    .paragrafo-header {
+        font-size: 1.3rem;
+    }
+
+    .div-img {
+        margin-top: -95px;
+    }
+
+    .img-perfil {
+        width:150px;
+    }
+
+    .secao-principal {
+        width: 47%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links {
+        width: 70%;
+        padding: 30px 120px;
+    }
+
+    .lista-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0px;
+    }
+
+    .item-link {
+        font-size: 0.8rem;
+        text-align: center;
+        width: 50px;
+        height: 20px;
+    }
+
+    .item-link:hover {
+        transform: scale(1.1);
+    }
+
+    .secao-sobre-mim, .secao-formacao, .secao-portfolio, .secao-contato {
+        width: 82%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .titulo { 
+        font-size:2rem;
+    }
+
+    .formacao-educacional h2 {
+        font-size: 1.2rem;
+    }
+
+    .texto-sobre-mim, .texto-formacao {
+        font-size: 1rem;
+    }
+
+    .div-portfolio {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .div-item-portfolio {
+        display: flex;
+        align-items: center;
+        width:80%;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .descricao h2 {
+        font-size: 1.4rem;
+    }
+
+    .descricao p {
+        font-size: 1rem;
+    }
+
+    .item-link-portfolio {
+        font-size: 1.1rem;
+    }
+
+    form h2 {
+        font-size:1.4rem;
+    }
+
+    label, input, #textarea-contato-mensagem {
+        font-size: 1rem;
+    }
+
+    .input-contato-submit {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .div-mensagemSucesso {
+        width: 70%;
+        margin-top: 2.5rem;
+    }
+
+    .texto-mensagemSucesso {
+        font-size:1.3rem;
+    }
+
+    #botao-ok {
+        width: 80px;
+        height: 40px;
+    }
+}
