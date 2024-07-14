@@ -710,7 +710,7 @@ input {
     }
 
     .secao-sobre-mim, .secao-formacao, .secao-portfolio, .secao-contato {
-        width: 82%;
+        width: 95%;
         margin: 0 auto;
         margin-bottom: 2rem;
     }
