@@ -148,9 +148,19 @@ function enviaFormulario(event) {
    }
 
    if (formularioValido) {
+    
+    const textoMensagem = `Olá, meu nome é ${nome.value}.\nMeu e-mail é ${email.value}. \n\n${mensagem.value}`;
+
+    const numeroWhatsapp = 5511999895502;
+
+    const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURI(textoMensagem)}`;
+
+    window.open(urlWhatsapp, "_blank");
+
     titulo.style.display = 'none';
     formulario.style.display = 'none';
     divMensagemSucesso.style.display = 'flex';
+    
    }
 
 }
