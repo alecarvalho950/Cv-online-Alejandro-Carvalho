@@ -1,177 +1,93 @@
-/*Os links de navegação*/ 
-var linkSobreMim = document.querySelector('.item-sobre-mim');
-var linkFormacao = document.querySelector('.item-formacao');
-var linkPortfolio = document.querySelector('.item-portfolio');
-var linkContato = document.querySelector('.item-contato');
+AOS.init();
 
-/*Seções que já possuem conteúdo*/
-var sectionSobreMim = document.querySelector('.secao-sobre-mim');
-var sectionFormacao = document.querySelector('.secao-formacao');
-var sectionPortfolio = document.querySelector('.secao-portfolio');
-var sectionContato = document.querySelector('.secao-contato');
+var divMenuFixo = document.querySelector('.divMenuFixo');
+var divScroll = document.querySelector('.div-scroll');
+var menuList = document.querySelector('.menu-list');
+var buttonMenu = document.querySelector('.button-menu');
+var iconeMenu = document.querySelector('.iconeMenu');
+var iconeFechar = document.querySelector('.iconeFechar');
 
-/*Variáveis necessárias para mensagem de envio do formulário*/
-var formulario = document.querySelector('#contact-form');
-var titulo = document.querySelector('.secao-contato .titulo');
-var divMensagemSucesso = document.querySelector('.div-mensagemSucesso')
-
-/*Divs de cada input do formulário*/
-var divNome = document.querySelector('.input-contato-nome');
-var divEmail = document.querySelector('.input-contato-email');
-var divTelefone = document.querySelector('.input-contato-telefone');
-var divMensagem = document.querySelector('.input-contato-mensagem');
-var botaoOk = document.querySelector('#botao-ok');
-
-/*Inputs do Formulário de Contato*/
-var nome = document.getElementById('input-nome');
-var email = document.getElementById('input-email');
-var telefone = document.getElementById('input-telefone');
-var mensagem = document.getElementById('textarea-contato-mensagem');
-var botaoEnviar = document.querySelector('.input-contato-submit');
-
-/*Ouvinte de Eventos*/
-linkSobreMim.addEventListener('click', mostraSobreMim);
-linkFormacao.addEventListener('click', mostraFormacao);
-linkPortfolio.addEventListener('click', mostraPortfolio);
-linkContato.addEventListener('click', mostraContato);
-botaoOk.addEventListener('click', voltaFormulario);
-
-botaoEnviar.addEventListener('click', enviaFormulario);
-
-function mostraSobreMim(event) {
-    event.preventDefault();
-    fechaSecoes();
-    setTimeout(() => {
-        sectionSobreMim.style.display = 'flex';
-        linkSobreMim.style.opacity = '0.5';
-        sectionSobreMim.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-}
-
-function mostraFormacao(event) {
-    event.preventDefault();
-    fechaSecoes();
-    setTimeout(() => {
-        sectionFormacao.style.display = 'flex';
-        linkFormacao.style.opacity = '0.5';
-        sectionFormacao.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-}
-
-function mostraPortfolio(event) {
-    event.preventDefault();
-    fechaSecoes();
-    setTimeout(() => {
-        sectionPortfolio.style.display = 'flex';
-        linkPortfolio.style.opacity = '0.5';
-        sectionPortfolio.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-}
-
-function mostraContato(event) {
-    event.preventDefault();
-    fechaSecoes();
-    setTimeout(() => {
-        sectionContato.style.display = 'flex';
-        linkContato.style.opacity = '0.5';
-        sectionContato.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-}
-
-/*A seção é escondida, mostrando apenas a que foi chamada*/
-function fechaSecoes() {
-    sectionSobreMim.style.display = 'none';
-    linkSobreMim.style.opacity = '1.0';
-    sectionFormacao.style.display = 'none';
-    linkFormacao.style.opacity = '1.0';
-    sectionPortfolio.style.display = 'none';
-    linkPortfolio.style.opacity = '1.0';
-    sectionContato.style.display = 'none';
-    linkContato.style.opacity = '1.0';
-    window.scrollTo(0, 0);
-}
-
-function enviaFormulario(event) {
-    event.preventDefault();
-
-    var avisos = document.querySelectorAll('.aviso');
-    avisos.forEach(aviso => aviso.remove());
-
-    let formularioValido = true;
-
-   if (nome.value == '') {
-    formularioValido = false;
-    var textoAviso = document.createElement('p');
-    textoAviso.textContent = 'Por favor, digite o seu nome!';
-    textoAviso.style.color = 'red';
-    textoAviso.style.fontFamily = 'Arial';
-    textoAviso.style.fontWeight = 'bold';
-    textoAviso.style.margin = '2px 0px 0px 0px';
-    textoAviso.classList.add('aviso');
-    divNome.appendChild(textoAviso);
-   }
-
-   if (email.value == '') {
-    formularioValido = false;
-    var textoAviso = document.createElement('p');
-    textoAviso.textContent = 'Por favor, digite o seu email!';
-    textoAviso.style.color = 'red';
-    textoAviso.style.fontFamily = 'Arial';
-    textoAviso.style.fontWeight = 'bold';
-    textoAviso.style.margin = '2px 0px 0px 0px';
-    textoAviso.classList.add('aviso');
-    divEmail.appendChild(textoAviso);
-   } 
-   
-   if (telefone.value == '') {
-    formularioValido = false;
-    var textoAviso = document.createElement('p');
-    textoAviso.textContent = 'Por favor, digite o seu telefone!';
-    textoAviso.style.color = 'red';
-    textoAviso.style.fontFamily = 'Arial';
-    textoAviso.style.fontWeight = 'bold';
-    textoAviso.style.margin = '2px 0px 0px 0px';
-    textoAviso.classList.add('aviso');
-    divTelefone.appendChild(textoAviso);
-   } 
-   
-   if (mensagem.value == '') {
-    formularioValido = false;
-    var textoAviso = document.createElement('p');
-    textoAviso.textContent = 'Por favor, digite sua mensagem!';
-    textoAviso.style.color = 'red';
-    textoAviso.style.fontFamily = 'Arial';
-    textoAviso.style.fontWeight = 'bold';
-    textoAviso.style.margin = '2px 0px 0px 0px';
-    textoAviso.classList.add('aviso');
-    divMensagem.appendChild(textoAviso);
-   }
-
-   if (formularioValido) {
+const larguraTela = window.innerWidth;
+console.log(larguraTela);
+document.addEventListener('scroll', () => {
     
-    const textoMensagem = `Olá, meu nome é ${nome.value}.\nMeu e-mail é ${email.value}. \n\n${mensagem.value}`;
+    var posicaoAtual = window.scrollY;
+    if (posicaoAtual >= 50) {
+        divMenuFixo.classList.remove('hidden');
+        divMenuFixo.classList.add("flex");
+        divScroll.classList.remove('hidden');
+        divScroll.classList.add('flex');
 
-    const numeroWhatsapp = 5511999895502;
+        iconeMenu.addEventListener('click', () => {
+            iconeMenu.classList.add('hidden');
+            iconeFechar.classList.remove('hidden');
 
-    const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURI(textoMensagem)}`;
+            divMenuFixo.classList.add("border-b-2", "border-gray-900");
+            menuList.classList.remove("hidden");
+            menuList.classList.add("flex");
+            buttonMenu.classList.remove("hidden");
+            buttonMenu.classList.add("flex");
 
-    window.open(urlWhatsapp, "_blank");
+            iconeFechar.addEventListener('click', () => {
+                menuList.classList.remove('flex');
+                buttonMenu.classList.remove('flex');
+                menuList.classList.add('hidden');
+                buttonMenu.classList.add('hidden');
+                iconeFechar.classList.add('hidden');
+                iconeMenu.classList.remove('hidden');
+            });
 
-    titulo.style.display = 'none';
-    formulario.style.display = 'none';
-    divMensagemSucesso.style.display = 'flex';
-    
-   }
+        });
 
-}
+    } else if(posicaoAtual <= 50) {  
+        divMenuFixo.classList.remove('flex');
+        divMenuFixo.classList.remove("border-b-2", "border-gray-900");
+        divMenuFixo.classList.add('hidden');
+        divScroll.classList.remove('flex');
+        divScroll.classList.add('hidden');
 
-function voltaFormulario(event) {
-    event.preventDefault();
+        menuList.classList.remove("flex");
+        menuList.classList.add("hidden");
+        buttonMenu.classList.remove("flex");
+        buttonMenu.classList.add("hidden");
 
-    titulo.style.display = 'block';
-    formulario.style.display = 'flex';
-    divMensagemSucesso.style.display = 'none';
+    }
+});
 
-    formulario.reset();
-}
-   
+
+
+window.onload = function() {
+    const formContact = document.getElementById('formContact');
+    const divForm = document.getElementById('divForm');
+    const inputName = document.getElementById('nome');
+    const inputEmail = document.getElementById('email');
+    const inputMessage = document.getElementById('message');
+    const label = document.querySelectorAll('label');
+    const buttonSubmit = document.getElementById('buttonSubmit');
+
+           formContact.addEventListener('submit', function(event) { 
+                event.preventDefault();
+                emailjs.sendForm('service_2x365w6','template_18l1u89', this)
+                    .then(() => {
+                        inputName.value = '';
+                        inputEmail.value = '';
+                        inputMessage.value = '';
+
+                        Swal.fire({
+                            title: 'Sucesso!',
+                            text: 'Sua mensagem foi enviada. Verifique seu e-mail!',
+                            icon: 'success',
+                            confirmButtonColor: '#0891b2', // Cor cyan-600 que você está usando
+                            background: '#0a0a0a', // Cor escura para combinar com seu site
+                            color: '#fff'
+                        });
+                        this.reset();
+
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+
+

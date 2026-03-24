@@ -1,141 +1,477 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "NlJ4cQ58d7A_DsbDd",
+            });
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Portfólio pessoal</title>
-</head>
-<body>
-    <header>
-        <h1 class="titulo-header">ALEJANDRO CARVALHO</h1>
-        <p class="paragrafo-header">Desenvolvedor Front-End</p>
+    <style></style>
+  </head>
+  <body class="font-sans m-(0) box-content bg-[rgb(0,1,15)]">
+    <header
+      class="relative flex flex-col text-white width-full h-90 justify-center items-center border-b-8 border-white before:absolute before:top-0 before:left-0 before:bg-[url(./imgs/img-header.jpg)] before:bg-cover before:bg-no-repeat before:h-full before:w-full before:opacity-[0.3] before:z-[-1]"
+    >
+      <h1 data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="text-3xl md:text-5xl font-bold text-center mb-3">ALEJANDRO CARVALHO</h1>
+      <p data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" class="text-center text-2xl md:text-3xl font-bold">Desenvolvedor FullStack</p>
     </header>
-    <div class="div-img">
-        <img class="img-perfil" src="./imgs/foto-perfil (1).png" alt="Foto de Perfil">
-        <p class="paragrafo-div-img">HTML5, CSS3 e Javascript</p>
+    <div class="relative flex flex-col items-center mt-[-120px] mb-[40px]">
+      <img
+        class="w-[200px] border-8 border-white rounded-full z-(2)"
+        src="./imgs/foto-perfil (1).png"
+        alt="Foto de Perfil"
+      />
     </div>
-    <section class="secao-principal">
-        <nav class="nav-links">
-            <ul class="lista-nav">
-                <li><a class="item-link item-sobre-mim" href="#">Sobre mim</a></li>
-                <li><a class="item-link item-formacao" href="#">Formação</a></li>
-                <li><a class="item-link item-portfolio" href="#">Portfólio</a></li>
-                <li><a class="item-link item-contato" href="#">Contato</a></li>
-            </ul>
-        </nav>
+
+    <div class="divMenuFixo hidden flex-col md:flex-row items-center md:px-2 w-full bg-[rgb(0,1,15)] fixed top-0 right-0 md:border-b-2 md:border-gray-900 z-4">
+      <div class="div-scroll flex items-center justify-between w-full py-5 px-5 border-b-2 md:border-b-0 bg-[rgb(0,1,15)] border-gray-900">
+        <h2 class="text-white text-2xl font-bold">Ale.thecoder</h2>
+        <img src="./imgs/icone-menu.svg" class="md:hidden iconeMenu h-[40px] w-[40px] text-2xl font-bold">
+        <img src="./imgs/icone-close.svg" class="md:hidden iconeFechar hidden h-[40px] w-[40px] text-2xl font-bold">
+    </div>
+    <ul class="hidden flex-col md:flex md:flex-row md:gap-5 md:px-5 menu-list text-2xl md:text-xl mt-2 md:mt-0 text-gray-500 z-4">
+        <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#servicos">Serviços</a></li>
+        <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#projetos">Projetos</a></li>
+        <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#processos">Processos</a></li>
+        <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="hidden md:flex md:text-xl justify-center button-menu text-center text-2xl w-[40%] md:w-[60%] lg:w-[40%] xl:w-[20%] text-indigo-500 hover:text-indigo-100 hover:bg-indigo-800 border-2 border-indigo-500 py-1 px-2 rounded-full mt-2 md:mt-0 mb-4 md:mb-0 z-4"><a href="#contato">Iniciar Projeto</a></button>         
+    </div>
+
+    <section class="flex flex-col justify-center items-center px-5 md:px-20">
+      <h1 class=" text-white text-6xl md:text-7xl font-bold text-center mb-15">
+      Construo sistemas <span class="text-indigo-500">robustos</span> com interfaces <span class="text-cyan-500">impecáveis.</span>
+      </h1>
+      <p data-aos="fade-left" class="flex text-gray-600 text-3xl md:text-4xl text-center mb-15">
+        Criando o futuro da web através de código sólido e design minimalista. Desenvolvedor 
+        Full Stack dedicado a construir aplicações web robustas, escaláveis e 
+        centradas no usuário.
+      </p>
+      <button data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine"
+        class="flex flex-row justify-center items-center text-white text-3xl md:text-4xl bg-indigo-600 hover:opacity-60 rounded-full px-10 py-4 mb-8"
+      ><a class="flex" href="#contato">Iniciar Projeto
+        <img class="relative top-1" src="./imgs/icone-arrow-right.svg"/></a>
+      </button>
+      <button data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine"
+        class="flex flex-row justify-center items-center text-white text-3xl md:text-4xl bg-cyan-600 hover:opacity-60 rounded-full px-10 py-4 mb-20"
+      >
+       <a href="#projetos">Ver Trabalhos</a>
+      </button>
+      <ul data-aos="fade-up"
+     data-aos-duration="1000" class="flex text-white mb-15 justify-between w-[90%]">
+        <li class="flex flex-col text-center items-center">
+          <img class="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2" src="./imgs/icone-layers.svg" />
+          <span class="text-gray-600 text-xl md:text-2xl">Stack Moderna & Ágil</span>
+        </li>
+        <li class="flex flex-col text-center items-center">
+          <img
+            class="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2"
+            src="./imgs/icone-ads-click.svg"
+          />
+          <span class="text-gray-600 text-xl md:text-2xl"
+            >Foco na Experiência do Usuário</span
+          >
+        </li>
+        <li class="flex flex-col text-center items-center">
+          <img class="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2" src="./imgs/icone-cyclone.svg" />
+          <span class="text-gray-600 text-xl md:text-2xl">Automoção de Processos</span>
+        </li>
+      </ul>
     </section>
-    <section class="secao-sobre-mim">
-        <h1 class="titulo">Sobre mim</h1>
-        <p class="texto-sobre-mim">
-            Alejandro é um jovem de 21 anos, determinado, proativo e apaixonado por tecnologia. Atualmente cursando Bacharelado em Engenharia de Software pelo Centro Universitário Internacional UNINTER, ele vem se destacando pelo seu comprometimento com os estudos e pela busca constante por evolução profissional e pessoal.<br><br>
+    <section class="flex flex-col bg-black text-white">
+      <p class="text-gray-500 text-center mb-2 mt-20">STACK TÉCNICO</p>
+      <p class="text-5xl font-bold text-center mb-15 px-5">Tecnologias que domino</p>
+      <div class="marquee-wrapper mb-20">
+        <ul class="flex flex-row gap-4 text-lg md:text-xl h-[50px] mb-20 marquee">
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-html5-plain colored"></i>
+            <span class="font-bold">HTML5</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-css3-plain colored"></i>
+            <span class="font-bold">CSS3</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-javascript-plain colored"></i>
+            <span class="font-bold">Javascript</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-nodejs-plain colored"></i>
+            <span class="font-bold">Node.js</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-python-plain colored"></i>
+            <span class="font-bold">Python</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-mongodb-plain colored"></i>
+            <span class="font-bold">MongoDB</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-mysql-original colored"></i>
+            <span class="font-bold">MySQL</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-tailwindcss-original colored"></i>
+            <span class="font-bold">Tailwind</span>
+          </li>
+          <li
+            class="flex gap-2 items-center bg-mist-900 border-1 border-white rounded-full px-5 py-4"
+          >
+            <i class="devicon-bootstrap-plain colored"></i>
+            <span class="font-bold">Bootstrap</span>
+          </li>
+        </ul>
+      </div>
+      <p id="servicos" class="text-gray-500 text-center mb-4">O QUE OFEREÇO</p>
+      <p class="text-5xl font-bold text-center mb-15">Serviços especializados</p>
+      <div class="flex flex-col md:grid md:grid-cols-3 gap-5 px-5 md:px-5 mb-30">
+        <div class="flex flex-col justify-between bg-mist-950 px-4 rounded-xl mb-10">
+          <img
+            class="w-[40px] h-[40px] bg-indigo-500 rounded-lg mb-5 mt-10"
+            src="./imgs/icone-web.svg"
+          />
+          <h2 class="font-bold text-2xl mb-3">Desenvolvimento Web</h2>
+          <p class="text-gray-500 text-xl">
+            Interfaces modernas e ultravelozes com HTML5, CSS3 e Tailwind — de
+            landing pages de alta conversão a sistemas dinâmicos em JavaScript.
+          </p>
+          <ul
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Interfaces responsivas
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Perfomance & SEO
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Acessibilidade
+            </li>
+          </ul>
+        </div>
 
-            Atua como assistente de suporte de TI, função que lhe proporciona vivência prática com atendimento técnico, resolução de problemas, contato com sistemas e ferramentas do dia a dia empresarial, além de fortalecer suas habilidades de comunicação e trabalho em equipe. Essa experiência tem sido essencial para desenvolver uma visão crítica sobre a aplicação da tecnologia nas empresas.<br><br>
+        <div class="flex flex-col justify-between bg-mist-950 px-4 rounded-xl mb-10">
+          <img
+            class="w-[40px] h-[40px] bg-cyan-400 rounded-lg mb-5 mt-10"
+            src="./imgs/account-tree.svg"
+          />
+          <h2 class="font-bold text-2xl mb-3">Estruturas Organizada</h2>
+          <p class="text-gray-500 text-xl">
+            Desenvolvimento de código modular e organizado, com integração
+            eficiente de APIs e foco em escalabilidade e manutenção do projeto.
+          </p>
+          <ul
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Código Modular
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Gerenciamento de Estado
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Arquitetura Clean Code
+            </li>
+          </ul>
+        </div>
 
-            Focado em se tornar um desenvolvedor de software completo, Alejandro dedica parte do seu tempo livre à prática e desenvolvimento de projetos próprios utilizando HTML, CSS, JavaScript e ferramentas modernas do ecossistema web. Está sempre explorando novas tecnologias, frameworks, bibliotecas e metodologias de desenvolvimento como Git, GitHub, APIs REST, entre outros.<br><br>
+        <div class="flex flex-col justify-between bg-mist-950 px-4 rounded-xl mb-10">
+          <img
+            class="w-[40px] h-[40px] bg-indigo-200 rounded-lg mb-5 mt-10"
+            src="./imgs/icone-bolt.svg"
+          />
+          <h2 class="font-bold text-2xl mb-3">Integração de APIs</h2>
+          <p class="text-gray-500 text-xl">
+            APIs REST robustas e integração com serviços, garantindo um fluxo de dados contínuo, preparado para o crescimento da aplicação.
+          </p>
+          <ul
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              APIs REST
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Webhooks
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Auth (JWT/OAuth)
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            Além da área de desenvolvimento, tem interesse por UX/UI Design, o que o leva a estudar boas práticas de usabilidade e acessibilidade para criar soluções que sejam eficientes e agradáveis para o usuário final. Também se mantém atualizado sobre tendências do mercado de tecnologia, participando de comunidades online e realizando cursos complementares.<br><br>
+      <p id="projetos" class="text-gray-500 text-center mb-4">PORTFÓLIO</p>
+      <p class="text-5xl font-bold text-center mb-15">Projetos em Destaque</p>
+      <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-10  mb-30">
+        <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">
+            Sistema de Catálogo de Produtos
+          </h2>
+          <p class="text-gray-500 text-xl">
+            Este projeto nasceu de uma necessidade real de mercado: modernizar a
+            gestão de estoque e a vitrine digital da Jack Peças. A solução
+            substitui processos manuais e custos com plataformas de terceiros
+            por um sistema personalizado, escalável e de alto desempenho.
+          </p>
+          <ul
+            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              HTML5
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Tailwind CSS
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Node.Js
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Express
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              MongoDB
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              JWT (JSON Web Token)
+            </li>
+          </ul>
+          <button
+            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+          >
+            <a
+              href="https://jack-pe-as.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Projeto</a
+            >
+          </button>
+        </div>
 
-            Fora do ambiente técnico, Alejandro encontra equilíbrio em sua paixão pelo futebol. Gosta de jogar e acompanhar jogos, enxergando no esporte uma forma de manter a mente ativa, cultivar disciplina e reforçar valores como trabalho em equipe, foco e persistência — características que também aplica no seu dia a dia profissional.<br><br>
+        <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">Sistema de Hamburgueria</h2>
+          <p class="text-gray-500 text-xl">
+            Um site de hamburgueria responsivo desenvolvido com base em 2 aulas
+            do canal SujeitoProgramador, ministradas por Mateus Fraga. Permite
+            que os usuários visualizem o menu da hamburgueria, façam pedidos e
+            peçam através do Whatsapp.
+          </p>
+          <ul
+            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              HTML5
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">CSS</li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Tailwind CSS
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Biblioteca Toastify
+            </li>
+          </ul>
+          <button
+            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+          >
+            <a
+              href="https://hamburgueria-do-ale.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Projeto</a
+            >
+          </button>
+        </div>
 
-            Em resumo, Alejandro é um estudante comprometido, com uma base técnica sólida e em constante evolução. Seu espírito curioso, aliado à sua dedicação e resiliência, são diferenciais que o impulsionam em sua jornada rumo a uma carreira promissora no desenvolvimento de software.
-        </p>
+        <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">Calculadora Básica com Javascript</h2>
+          <p class="text-gray-500 text-xl">
+            Uma calculadora simples e funcional desenvolvida com HTML, CSS e
+            JavaScript. Este projeto foi realizado com o intuito de aprender e
+            praticar conceitos básicos de desenvolvimento web e manipulação do
+            DOM.
+          </p>
+          <ul
+            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              HTML5
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">CSS</li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              JavaScript
+            </li>
+          </ul>
+          <button
+            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+          >
+            <a
+              href="https://alecarvalho950.github.io/calculadoraBasica/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Projeto</a
+            >
+          </button>
+        </div>
+
+        <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">
+            Doceria da Mih - Catálogo Digital
+          </h2>
+          <p class="text-gray-500 text-xl">
+            Desenvolvimento de uma landing page de alta conversão para o setor
+            gastronômico. O projeto centraliza o cardápio digital e automatiza o
+            fluxo de pedidos via WhatsApp, eliminando barreiras entre o produto
+            e o cliente final com um design focado em experiência do usuário
+            (UX).
+          </p>
+          <ul
+            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              HTML5
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">CSS</li>
+          </ul>
+          <button
+            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+          >
+            <a
+              href="https://landing-doceria.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Projeto</a
+            >
+          </button>
+        </div>
+      </div>
     </section>
 
-    <section class="secao-formacao">
-        <h1 class="titulo">Formação</h1>
-        <div class="formacao-educacional">
-            <h2>Formação Educacional</h2>
-            <p class="texto-formacao">
-                <strong>Bacharelado em Engenharia de Software</strong><br>
-                Centro Universitário Internacional UNINTER<br>
-                2023 - 2027<br>
-                Atualmente estou cursando o bacharelado em Engenharia de Software no Centro Universitário Internacional UNINTER. Durante o curso, estou adquirindo conhecimentos em desenvolvimento de software, engenharia de requisitos, testes e qualidade de software, além de gerenciamento de projetos. Estou envolvido em projetos práticos que me permitem aplicar os conhecimentos teóricos em situações reais, desenvolvendo habilidades técnicas e de trabalho em equipe.<br><br>
+    <section id="processos" class="flex flex-col bg-black text-white px-5 md:px-20">
+      <p class="text-gray-500 text-start mb-4">COMO TRABALHO</p>
+      <p class="text-5xl font-bold text-start mb-15"> Processo simples, resultado sólido</p>
+      <div class="flex flex-col gap-20 mb-50">
+        <div class="flex">
+          <div class="flex flex-col h-full gap-2 items-center">
+            <img
+              class="h-[40px] md:h-[60px] w-[40px] md:w-[60px] bg-[#1d1931] px-1 py-1 rounded-xl"
+              src="./imgs/icone-search.svg"
+            />
+            <div class="border-1 border-gray-800 h-[40px] md:h-[60px]"></div>
+          </div>
+          <div class="flex flex-col ml-6 gap-2 w-[80%]">
+            <p class="text-gray-500 text-lg md:text-xl">01</p>
+            <span class="font-bold text-xl md:text-2xl">Descoberta</span>
+            <p class="text-gray-500 text-lg md:text-xl">
+              Entendemos profundamente os objetivos, a stack atual e os desafios
+              técnicos do proejto.
             </p>
-            <h2>Idioma</h2>
-            <p class="texto-formacao">
-                <strong>Inglês</strong><br>
-                <i>Básico</i><br>
-                Conhecimento básico em compreensão, leitura e escrita. Estou em processo de aprimoramento contínuo do idioma por meio de cursos e prática diária.
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex flex-col h-full gap-2 items-center">
+            <img
+              class="h-[40px] md:h-[60px] w-[40px] md:w-[60px] bg-[#1d1931] px-1 py-1 rounded-xl"
+              src="./imgs/icone-construction.svg"
+            />
+            <div class="border-1 border-gray-800 h-[40px] md:h-[60px]"></div>
+          </div>
+          <div class="flex flex-col ml-6 gap-2 w-[80%]">
+            <p class="text-gray-500 text-lg md:text-xl">02</p>
+            <span class="font-bold text-xl md:text-2xl">Construção</span>
+            <p class="text-gray-500 text-lg md:text-xl">
+              Desenvolvimento iterativo com entregas semanais, testes
+              automatizados e code reviews.
             </p>
+          </div>
         </div>
-    </section>
-    <section class="secao-portfolio">
-        <h1 class="titulo">Portfólio</h1>
-        <div class="div-portfolio">
-            <div class="div-item-portfolio">
-                <img class="img-item-portfolio" src="./imgs/captura-tela.png" alt="Print da calculadora">
-                <div class="descricao">
-                    <h2>Calculadora Básica</h2>
-                    <p>Uma calculadora simples e funcional desenvolvida com HTML, CSS e JavaScript.</p>
-                    <p><a class="item-link-portfolio" href="https://alecarvalho950.github.io/calculadoraBasica/" target="_blank" rel="noopener noreferrer">Clique para ver</a></p>
-                </div>
-            </div>
-            <div class="div-item-portfolio">
-                <img class="img-item-portfolio" src="./imgs/foto-hamburgueria.png" alt="Print do site da hamburgueria">
-                <div class="descricao">
-                    <h2>Hamburgueria do Ale</h2>
-                    <p>Um site de hamburgueria responsivo. Permite que os usuários visualizem o menu da hamburgueria, façam pedidos e peçam através do Whatsapp.</p>
-                    <p><a class="item-link-portfolio" href="https://hamburgueria-do-ale.vercel.app/" target="_blank" rel="noopener noreferrer">Clique para ver</a></p>
-                </div>
-            </div>
-            <div class="div-item-portfolio">
-                <img class="img-item-portfolio" src="./imgs/foto-calcule-seu-imc.png" alt="Print do site Calcule seu IMC">
-                <div class="descricao">
-                    <h2>Calcule seu IMC</h2>
-                    <p>O projeto "Calcule Seu IMC" é uma aplicação web interativa desenvolvida para ajudar os usuários a calcular seu Índice de Massa Corporal (IMC) de maneira rápida e fácil.</p>
-                    <p><a class="item-link-portfolio" href="https://calcule-seu-imc-hazel.vercel.app/" target="_blank" rel="noopener noreferrer">Clique para ver</a></p>
-                </div>
-            </div>
-            <div class="div-item-portfolio">
-                <img class="img-item-portfolio" src="./imgs/foto-idade-dinamica.png" alt="Print do site Idade Dinâmica">
-                <div class="descricao">
-                    <h2>Idade Dinâmica</h2>
-                    <p>Projeto interativo que permite ao usuário inserir seu ano de nascimento e selecionar seu gênero. A aplicação calcula a idade do usuário e exibe o símbolo correspondente ao gênero escolhido.</p>
-                    <p><a class="item-link-portfolio" href="https://idade-dinamica.vercel.app/" target="_blank" rel="noopener noreferrer">Clique para ver</a></p>
-                </div>
-            </div>
-            <div class="div-item-portfolio">
-                <img class="img-item-portfolio" src="./imgs/foto-conversor-de-moedas.png" alt="Print do site Conversor de Moedas">
-                <div class="descricao">
-                    <h2>Conversor de moedas</h2>
-                    <p>Projeto de conversor de moedas que permite ao usuário converter valores em Reais (BRL) para Euro (EUR), Dólar (USD) ou Libra Esterlina (GBP).</p>
-                    <p><a class="item-link-portfolio" href="https://alecarvalho950.github.io/Conversor-de-Moedas/" target="_blank" rel="noopener noreferrer">Clique para ver</a></p>
-                </div>
-            </div>
+
+        <div class="flex">
+          <div class="flex flex-col h-full gap-2 items-center">
+            <img
+              class="h-[40px] md:h-[60px] w-[40px] md:w-[60px] bg-[#1d1931] px-1 py-1 rounded-xl"
+              src="./imgs/icone-rocket_launch.svg"
+            />
+            <div class="border-1 border-gray-800 h-[40px] md:h-[60px]"></div>
+          </div>
+          <div class="flex flex-col ml-6 gap-2 w-[80%]">
+            <p class="text-gray-500 text-lg md:text-xl">03</p>
+            <span class="font-bold text-xl md:text-2xl">Deploy</span>
+            <p class="text-gray-500 text-lg md:text-xl">
+              Lançamento com CI/CD, monitoramento e suporte pós-entrega para
+              garantir estabilidade.
+            </p>
+          </div>
         </div>
-    </section>
-    <section class="secao-contato">
-        <h1 class="titulo">Contato</h1>
-        <form id="contact-form">
-            <h2>Envie uma Mensagem</h2>
-            <div class="form-contato">
-                <div class="input-contato-nome">
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="input-nome" placeholder="Digite seu nome" required>
-                </div>
-                <div class="input-contato-email">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="input-email" placeholder="exemplo@gmail.com" required>
-                </div>
-                <div class="input-contato-telefone">
-                    <label for="telefone">Telefone:</label>
-                    <input type="number" name="telefone" id="input-telefone" placeholder="Digite o número com DDD" required>
-                </div>
-                <div class="input-contato-mensagem">
-                    <label for="mensagem">Digite sua mensagem:</label>
-                    <textarea name="mensagem" id="textarea-contato-mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
-                </div>
-                <div class="div-button-submit">
-                    <input class="input-contato-submit" type="submit" value="Enviar">
-                </div>
-            </div>
-        </form>
-        <div class="div-mensagemSucesso">
-            <p class="texto-mensagemSucesso">Enviado com sucesso!</p>
-            <button id="botao-ok">Ok</button>
+      </div>
+
+      <div class="flex flex-col md:grid md:grid-cols-2 md:gap-20">
+        <div>
+        <p id="contato" class="text-gray-500 text-start mb-4">CONTATO</p>
+        <p class="text-5xl font-bold text-start mb-7"> Vamos construir algo juntos</p>
+        <p class="text-gray-500 text-lg md:text-xl">
+        Tem um projeto em mente ou um desafio técnico para resolver? Vamos
+        conversar. Respondo em até 24 horas e adoro discutir como o
+        desenvolvimento web pode gerar impacto real no seu negócio.
+      </p>
+        <div class="flex gap-5 mb-20 mt-10">
+          <a href="https://github.com/alecarvalho950" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original text-4xl hover:opacity-60"></i></a>
+          <a href="https://www.linkedin.com/in/alejandro-carvalho" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain text-4xl hover:opacity-60"></i></a>
         </div>
+      </div>
+      
+      <form id="formContact" class="flex flex-col bg-mist-900 border border-gray-900 rounded-xl py-10 px-5 text-gray-500 mb-40">
+        <div id="divForm" class="flex flex-col">
+            <label class="text-lg font-bold mb-1" for="nome">NOME</label>
+            <input class="border border-gray-900 py-3 px-3 rounded-xl bg-mist-950 " type="text" name="nome" id="nome" placeholder="Seu nome">
+
+            <label class="text-lg font-bold mb-1 mt-4" for="email">E-MAIL</label>
+            <input class="border border-gray-900 py-3 px-3 rounded-xl bg-mist-950 " type="email" name="email" id="email" placeholder="seu@email.com">
+            
+            <label class="text-lg font-bold mb-1 mt-4" for="message">MENSAGEM</label>
+            <textarea class="border border-gray-900 rounded-xl bg-mist-950 px-5 py-5" name="message" id="message" rows="5" cols="35" placeholder="Conte sobre o seu projeto..."></textarea>
+            <button id="buttonSubmit" class=" self-center md:self-end text-nowrap text-white text-xl bg-cyan-600 hover:opacity-60 rounded-full py-2 px-4 mt-5" type="submit">Enviar Mensagem</button>
+        </div>
+      </form>
+      </div>
+  
     </section>
+    <footer class="flex flex-col gap-5 text-gray-500 text-lg justify-center items-center bg-[rgb(0,1,15)] border-t-1 border-gray-900 py-10">
+        <p>Ale.thecoder - Desenvolvedor FullStack</p>
+        <p>© 2026 - Todos os direitos reservados</p>
+    </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
