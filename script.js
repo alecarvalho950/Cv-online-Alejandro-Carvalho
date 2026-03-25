@@ -1,5 +1,22 @@
 AOS.init();
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+    })
+})
+
 var divMenuFixo = document.querySelector('.divMenuFixo');
 var divScroll = document.querySelector('.div-scroll');
 var menuList = document.querySelector('.menu-list');
@@ -77,8 +94,8 @@ window.onload = function() {
                             title: 'Sucesso!',
                             text: 'Sua mensagem foi enviada. Verifique seu e-mail!',
                             icon: 'success',
-                            confirmButtonColor: '#0891b2', // Cor cyan-600 que você está usando
-                            background: '#0a0a0a', // Cor escura para combinar com seu site
+                            confirmButtonColor: '#0891b2',
+                            background: '#0a0a0a',
                             color: '#fff'
                         });
                         this.reset();
