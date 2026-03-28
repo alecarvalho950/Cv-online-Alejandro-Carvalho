@@ -61,7 +61,7 @@
         <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#processos">Processos</a></li>
         <li class="mb-4 md:mb-0 hover:text-gray-300"><a href="#contato">Contato</a></li>
     </ul>
-    <button class="hidden md:flex md:text-xl justify-center button-menu text-center text-2xl w-[40%] md:w-[60%] lg:w-[40%] xl:w-[20%] text-indigo-500 hover:text-indigo-100 hover:bg-indigo-800 border-2 border-indigo-500 py-1 px-2 rounded-full mt-2 md:mt-0 mb-4 md:mb-0 z-4"><a href="#contato">Iniciar Projeto</a></button>         
+    <button class="hidden md:flex md:text-xl justify-center button-menu text-center text-nowrap text-2xl w-[40%] md:w-[60%] lg:w-[40%] xl:w-[20%] text-indigo-500 hover:text-indigo-100 hover:bg-indigo-800 border-2 border-indigo-500 py-1 px-2 rounded-full mt-2 md:mt-0 mb-4 md:mb-0 z-4"><a href="#contato">Iniciar Projeto</a></button>         
     </div>
 
     <section class="flex flex-col justify-center items-center px-5 md:px-20">
@@ -167,7 +167,7 @@
       </div>
       <p id="servicos" class="text-gray-500 text-center mb-4">O QUE OFEREÇO</p>
       <p class="text-5xl font-bold text-center mb-15">Serviços especializados</p>
-      <div class="flex flex-col md:grid md:grid-cols-3 gap-5 px-5 md:px-5 mb-30">
+      <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-5 mb-30">
         <div class="flex flex-col justify-between bg-mist-950 px-4 rounded-xl mb-10">
           <img
             class="w-[40px] h-[40px] bg-indigo-500 rounded-lg mb-5 mt-10"
@@ -179,7 +179,7 @@
             landing pages de alta conversão a sistemas dinâmicos em JavaScript.
           </p>
           <ul
-            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 self-start text-gray-500 text-lg gap-4 mt-10 mb-15"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               Interfaces responsivas
@@ -204,7 +204,7 @@
             eficiente de APIs e foco em escalabilidade e manutenção do projeto.
           </p>
           <ul
-            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 self-start text-gray-500 text-lg gap-4 mt-10 mb-15"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               Código Modular
@@ -228,7 +228,7 @@
             APIs REST robustas e integração com serviços, garantindo um fluxo de dados contínuo, preparado para o crescimento da aplicação.
           </p>
           <ul
-            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 items-start text-gray-500 text-lg gap-4 mt-10 mb-15"
+            class="flex flex-col md:grid md:grid-rows-3 md:grid-cols-1 self-start text-gray-500 text-lg gap-4 mt-10 mb-15"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               APIs REST
@@ -245,8 +245,9 @@
 
       <p id="projetos" class="text-gray-500 text-center mb-4">PORTFÓLIO</p>
       <p class="text-5xl font-bold text-center mb-15">Projetos em Destaque</p>
-      <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-10  mb-30">
+      <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-3 gap-5 px-5 md:px-10  mb-30">
         <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <img class="mt-5 mb-5 rounded-xl" src="./imgs/banner-sistema-jackpecas.png" alt="Captura de tela do sistema de cátalogo de produtos">
           <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">
             Sistema de Catálogo de Produtos
           </h2>
@@ -257,13 +258,13 @@
             por um sistema personalizado, escalável e de alto desempenho.
           </p>
           <ul
-            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+            class="flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-3 self-start text-gray-500 text-lg gap-3 mt-10 mb-10"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               HTML5
             </li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
-              Tailwind CSS
+              Tailwind
             </li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               Node.Js
@@ -275,14 +276,70 @@
               MongoDB
             </li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
-              JWT (JSON Web Token)
+              JWT
             </li>
           </ul>
-          <button
-            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
-          >
+          <button class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-5">
+            <a
+              href="https://github.com/alecarvalho950/Jack-Pe-as"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Github
+            </a>
+          </button>
+          <button class="bg-cyan-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-nowrap text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10">
             <a
               href="https://jack-pe-as.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Projeto
+            </a>
+          </button>
+        </div>
+
+        <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <img class="mt-5 mb-5 rounded-xl" src="./imgs/banner-portfolio.png" alt="Captura de tela do sistema de cátalogo de produtos">
+          <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">
+            Portfólio pessoal
+          </h2>
+          <p class="text-gray-500 text-xl">
+            Este é o meu portfólio profissional, reconstruído para focar em alta performance, 
+            design minimalista e experiência do usuário. O projeto demonstra minhas habilidades 
+            em criar sistemas robustos com interfaces impecáveis, utilizando o que há de mais 
+            moderno no ecossistema web.
+          </p>
+          <ul
+            class="flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-3 self-start text-gray-500 text-lg gap-3 mt-10 mb-10"
+          >
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              HTML5
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              Tailwind
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              AOS.js
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              DevIcons
+            </li>
+            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
+              EmailJS
+            </li>
+          </ul>
+          <button class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-5">
+            <a
+              href="https://github.com/alecarvalho950/Cv-online-Alejandro-Carvalho"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Github
+            </a>
+          </button>
+          <button
+            class="bg-cyan-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-nowrap text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+          >
+            <a
+              href="https://alecarvalho950.github.io/Cv-online-Alejandro-Carvalho/"
               target="_blank"
               rel="noopener noreferrer"
               >Ver Projeto</a
@@ -291,6 +348,7 @@
         </div>
 
         <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <img class="mt-5 mb-5 rounded-xl" src="./imgs/banner-hamburgueria.png" alt="Captura de tela do sistema de cátalogo de produtos">
           <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">Sistema de Hamburgueria</h2>
           <p class="text-gray-500 text-xl">
             Um site de hamburgueria responsivo desenvolvido com base em 2 aulas
@@ -299,21 +357,26 @@
             peçam através do Whatsapp.
           </p>
           <ul
-            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+            class="flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-3 self-start text-gray-500 text-lg gap-3 mt-10 mb-10"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               HTML5
             </li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">CSS</li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
-              Tailwind CSS
-            </li>
-            <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
-              Biblioteca Toastify
+              Tailwind
             </li>
           </ul>
+          <button class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-5">
+            <a
+              href="https://github.com/alecarvalho950/hamburgueria_do_Ale"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Github
+            </a>
+          </button>
           <button
-            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+            class="bg-cyan-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-nowrap text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
           >
             <a
               href="https://hamburgueria-do-ale.vercel.app/"
@@ -325,6 +388,7 @@
         </div>
 
         <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <img class="mt-5 mb-5 rounded-xl" src="./imgs/banner calculadora-basica.png" alt="Captura de tela do sistema de cátalogo de produtos">
           <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">Calculadora Básica com Javascript</h2>
           <p class="text-gray-500 text-xl">
             Uma calculadora simples e funcional desenvolvida com HTML, CSS e
@@ -333,7 +397,7 @@
             DOM.
           </p>
           <ul
-            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+            class="flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-3 self-start text-gray-500 text-lg gap-3 mt-10 mb-10"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               HTML5
@@ -343,8 +407,16 @@
               JavaScript
             </li>
           </ul>
+          <button class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-5">
+            <a
+              href="https://github.com/alecarvalho950/calculadoraBasica"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Github
+            </a>
+          </button>
           <button
-            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+            class="bg-cyan-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-nowrap text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
           >
             <a
               href="https://alecarvalho950.github.io/calculadoraBasica/"
@@ -356,6 +428,7 @@
         </div>
 
         <div class="flex flex-col justify-between bg-mist-950 px-6 rounded-xl mb-10">
+          <img class="mt-5 mb-5 rounded-xl" src="./imgs/banner-doceria-da-mih.png" alt="Captura de tela do sistema de cátalogo de produtos">
           <h2 class="font-bold text-2xl md:text-3xl mb-3 mt-3">
             Doceria da Mih - Catálogo Digital
           </h2>
@@ -367,15 +440,23 @@
             (UX).
           </p>
           <ul
-            class="flex flex-wrap text-gray-500 text-lg gap-3 mt-10 mb-10"
+            class="flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-3 self-start text-gray-500 text-lg gap-3 mt-10 mb-10"
           >
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">
               HTML5
             </li>
             <li class="bg-mist-900 rounded-full px-2 py-1 text-center">CSS</li>
           </ul>
+          <button class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-5">
+            <a
+              href="https://github.com/alecarvalho950/landing-doceria"
+              target="_blank"
+              rel="noopener noreferrer"
+              > Github
+            </a>
+          </button>
           <button
-            class="bg-indigo-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
+            class="bg-cyan-600 w-[80%] self-center md:w-[60%] lg:w-[40%] md:self-end text-white text-nowrap text-xl font-bold py-2 px-2 rounded-full hover:opacity-60 mb-10"
           >
             <a
               href="https://landing-doceria.vercel.app/"
